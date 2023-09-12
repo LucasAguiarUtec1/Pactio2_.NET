@@ -52,5 +52,17 @@ namespace PracticoClase1
 
             _personasBL.Delete(documento);
         }
+
+        public void UpdatePersona()
+        {
+            Console.WriteLine("Ingrese el documento de la persona a actualizar");
+            string documento = Console.ReadLine();
+            Console.WriteLine("Ingrese el nombre actualizado de la persona");
+            string nombre = Console.ReadLine();
+            Persona p = new Persona();
+            p.Nombre = nombre;
+            p.Documento = documento;
+            _personasBL.Update(p);
+        }
     }
 }

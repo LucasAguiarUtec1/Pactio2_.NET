@@ -16,12 +16,13 @@ Console.WriteLine("Comandos Posibles:");
 Console.WriteLine("1 - Agregar Persona");
 Console.WriteLine("2 - Listar Personas");
 Console.WriteLine("3 - Eliminar Persona");
-Console.WriteLine("4 - Salir");
+Console.WriteLine("4 - Actualizar Persona");
+Console.WriteLine("5 - Salir");
 
 Console.Write("Ingrese Comando> ");
 string command = Console.ReadLine();
 
-while(command != "4")
+while(command != "5")
 {
     try
     {
@@ -35,6 +36,9 @@ while(command != "4")
                 break;
             case "3":
                 commands.RemovePersona();
+                break;
+            case "4":
+                commands.UpdatePersona();
                 break;
             default:
                 Console.WriteLine("Comando no reconocido");
